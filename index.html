@@ -1,0 +1,72 @@
+
+<html ng-app="app">
+    <head>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+        <title>Canada Drives Assignment</title>
+
+        <link rel="stylesheet" href="lib/custombootstrap.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+        
+        <link rel="stylesheet" href="app/style.css">
+    </head>
+    <body  ng-controller="userController">
+
+        <div class="container">
+
+            <div class="panel  panel-default">
+                <div class="panel-heading">
+
+                    <form class="form-inline">
+                       
+                            <div class="col-md-2 pad-top-30"> 
+                                <span class="header">Users  </span><span class="badge">{{userData.length}}</span>
+                            </div>
+                           <div class="col-md-offset-5 text-right"> 
+                               <div class="row">
+                                   <div class="col-md-offset-6 text-left">
+                                       <div class="col-md-12">
+                                           <span>Search</span>
+                                       </div>
+                                       <div class="col-md-12">
+                                        <input ng-model="searchText" class="form-control input-sm">
+                                       </div>
+                                   </div>
+                               </div>
+                              
+                            </div>
+                       
+                    </form>
+
+                </div>
+                <div class="panel-body">
+                    <div class="list-group">
+                        <div ng-repeat="user in userData | filter:searchText  | orderBy:predicate:reverse" class="list-group-item ">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <span class="user-image"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-md-12 name">{{user.name}}</div>
+                                    <div class="col-md-12 user-name">{{user.username}}</div>
+                                </div>
+                                <div class="col-md-5 text-right">
+                                    <span class="email">{{user.email}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <script src="lib/angular/angular.min.js" charset="utf-8"></script>
+        <script src="app/app.js" charset="utf-8"></script>
+
+    </body>
+    </body>
+</html>

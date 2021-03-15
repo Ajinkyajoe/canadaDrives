@@ -1,0 +1,51 @@
+.user-image {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #d4d4d4;
+}
+
+.name {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.user-name {
+   color: #a0a0a0;
+   font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.email {
+    color:#1696cc;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.panel-default {
+    border: none;
+}
+
+.panel-default>.panel-heading {
+    border: none;
+    background-color: white;
+}
+
+.container {
+    padding-top: 50px;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.pad-top-30 {
+    padding-top: 30px;
+}
